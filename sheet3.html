@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>sheet3</title>
+    <meta charset="utf8">
+</head>
+
+<body>
+<h2>Coronavirus Intake From For attend class</h2>
+<h6>for all of our safety , please fill this out 24 hours prior to each class (until further notice). be sure that information you&apos;ll give is accurate and complate .please get immediate medical attention if you have any of the servere COVID-19 signs.</h6>
+<form method="GET" action="sara.html" target="_blank" autocomplete="off" >
+    <fieldset>
+        <legend> Personal information :</legend>
+        <label for="sao" >  First name: </label> <br>
+        <input  type="text" id="sao" name="first" required >
+        <br>
+        <label for="name" >  Last name: </label> <br>
+        <input  type="text" id="name" name="last" maxlength="6" >
+        <br>
+        <label for="no" >  Date of Brith: </label> <br>
+        <input  type="date" id="no" name="date of Brith" min="2003-01-01" >
+        <br>
+        <label for="ju" >  phone : </label> <br>
+        <input  type="tel" id="ju" name="ph" >
+        <br>
+        <label for="am" >  Email: </label> <br>
+        <input  type="email" id="am" name="email" required >
+        <br>
+        <label for="a">Do you have "تطمن-تباعد-توكلنا" APPs in your phone:</label>
+        <input type="radio" id="ye" name="yes" value="yes" required>
+        <label for="ye">yes</label>
+        <input type="radio" id="no" name="yes" value="No" required>
+        <label for="no">No</label><br>
+        </fieldset>    
+
+        <fieldset>
+        <legend> Class information :</legend>
+        <label for="cl2"> Choose class:</label>
+        <input list="cl2" name="cl">
+        <datalist id="cl2">
+        <option value="402IT:web programing"></option>
+        <option value="201 Cs:programong1"></option>
+        <option value="202 Cs: programing2"></option>
+        <option value="412 Cs:computer ethic"></option>
+        </datalist>
+        <br><br>
+        <label for="ar"> please explain why you need to attand lap:</label><br><br>
+        <textarea name="please" rows="10" cols="30">
+        </textarea>
+       </fieldset> 
+
+        <fieldset>
+        <legend> Heath information:</legend>
+        <label for="hh"> How healthy do you feel in general?</label><br>
+        <input  type="range" id="hh" name="helthy" min="0" max="10" >10
+        <br>
+        <label for="sah"> check the symptoms that you have experienced in the PAST week:</label><br>
+        <input  type="checkbox" id="77" name="chek" value="op1" >
+        <label for="77">Fever/Chills</label><br>
+        <input  type="checkbox" id="2m" name="chek" value="op2" >
+        <label for="2m">Headaches</label><br>
+        <input  type="checkbox" id="33" name="chek" value="op3" >
+        <label for="33">Coughing</label><br>
+        <input  type="checkbox" id="47" name="chek" value="op4" >
+        <label for="47">Shortness of breath</label><br>
+        <input  type="checkbox" id="50" name="chek" value="op5" >
+        <label for="50">Recent loss of sense of smell or taste</label><br>
+        </fieldset> 
+       <input type="submit"value="send">
+       </form>
+
+    </body>
+    </html>
+
