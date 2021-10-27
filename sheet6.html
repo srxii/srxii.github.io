@@ -1,0 +1,93 @@
+<html >
+<head>
+ <style>
+ .e { color:red;}
+ </style>
+ <script>
+ function validateForm() {
+ var r = true;
+ var x=document.getElementById("name").value;
+ var userName=document.getElementById("username").value;
+ var pass=document.getElementById("pass").value;
+ var pass2=document.getElementById("pass2").value;
+ //name should contaibn only letter
+ var regEx = /^[A-Za-z]+$/;
+ var regEx2= /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)/;
+ 
+ if (!(x.match(regEx)))
+ { document.getElementById('nameERR').innerHTML= "* only letter is allowed";
+ document.getElementById('name').style.borderColor='red';
+ 
+ r= false;}
+ else
+ { document.getElementById('nameERR').innerHTML= " ";
+  document.getElementById('name').style.borderColor='black';
+ }
+ 
+  if(userName.length==0){
+    document.getElementById('user_nameERR').innerHTML= "* Username Must be filed out ";
+
+   document.getElementById('username').style.borderColor='red';
+   r= false;
+ }
+ else
+ { document.getElementById('user_nameERR').innerHTML= " ";
+  document.getElementById('username').style.borderColor='black';
+ }
+
+ if(pass.length==0){
+    document.getElementById('passERR').innerHTML= "* Your Password Must be filed out ";
+    document.getElementById('pass').style.borderColor='red';
+   r= false;
+ }
+ if((pass==userName)){
+    document.getElementById('passERR').innerHTML= "* Your Password match user name ";
+    document.getElementById('pass').style.borderColor='red';
+   return false;
+ }
+  if(!(pass.match(regEx2))){
+    document.getElementById('passERR').innerHTML= "*Your Password should At lest one small litter and one capital and one digite";
+   document.getElementById('pass').style.borderColor='red';
+   r= false;
+ }
+ else
+ { document.getElementById('passERR').innerHTML= " ";
+  document.getElementById('pass').style.borderColor='black';
+ }
+
+ if(!(pass==pass2)){
+    document.getElementById('pass2ERR').innerHTML= "* Your Password does not match ";
+    document.getElementById('pass2').style.borderColor='red';
+   return false;
+ }
+
+  
+ return r;
+ }
+
+ </script>
+</head>
+<body>
+ <h1> SIGN UP </h1>
+<form onsubmit="return validateForm()">
+ Full name:
+ <input type="text" id="name" >   <label id="nameERR"  class= "e"> </label> <br><br>
+  Name:
+ <input type="text" id="username"> 
+ <label id="user_nameERR"  class= "e"> </label>
+ <br><br>
+ password:
+ <input type="password" id="pass"> 
+  <label id="passERR"  class= "e"> </label>
+   <br><br>
+ Confrim password:
+ <input type="password" id="pass2"> 
+  <label id="pass2ERR"  class= "e"></label>
+   <br><br>
+ <input type="submit" value="SIGN UP">
+
+</form>
+
+ 
+</body>
+</html>
